@@ -1,3 +1,5 @@
+import random
+
 import pygame
 
 pygame.init() ### Инициализация модуля Pygame
@@ -10,9 +12,15 @@ pygame.display.set_caption("Игра Тир")  ### Заголовок окна �
 icon = pygame.image.load("img/tirr.jpg")  ### Загружаем картинку из папки
 pygame.display.set_icon(icon)
 
-target_img = pygame.image.load("img/252.png")
+target_img = pygame.image.load("img/252.png")  ### Загрузка картинки мишени
 target_width = 80
 target_height = 80
+target_x = random.randint(0, SCREEN_WIDTH - target_width)  ### Задаем рандомные координаты появления мишени.
+target_y = random.randint(0, SCREEN_HEIGHT - target_height)
+
+    ### Задаем рандомный цвет экрана
+color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+
 
 
 
